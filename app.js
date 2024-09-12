@@ -1,0 +1,14 @@
+var _a;
+(_a = document.getElementById('generate-resume')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function () {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var experience = document.getElementById('experience').value;
+    var education = document.getElementById('education').value;
+    var skills = document.getElementById('Skills').value;
+    var resumeContent = "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Resume</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            margin: 0;\n            padding: 0;\n            background-color: #f4f4f4;\n            color: #333;\n        }\n        .container {\n            max-width: 800px;\n            margin: 20px auto;\n            padding: 20px;\n            background: #fff;\n            border-radius: 8px;\n            box-shadow: 0 0 10px rgba(0,0,0,0.1);\n        }\n        h1 {\n            text-align: center;\n            color: #333;\n        }\n        .section {\n            margin-bottom: 20px;\n        }\n        .section h2 {\n            border-bottom: 2px solid #007bff;\n            padding-bottom: 5px;\n            color: #007bff;\n            margin-bottom: 10px;\n        }\n        .section p {\n            margin: 5px 0;\n        }\n        .field-label {\n            font-weight: bold;\n            color: #555;\n        }\n        .field-value {\n            margin-left: 10px;\n        }\n        .contact-info {\n            display: flex;\n            flex-direction: column;\n        }\n        .contact-info p {\n            margin: 5px 0;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <h1>Resume</h1>\n\n        <div class=\"section\">\n            <h2>Personal Information</h2>\n            <p class=\"field-label\">Name:</p>\n            <p class=\"field-value\">".concat(name, "</p>\n            <p class=\"field-label\">Telephone:</p>\n            <p class=\"field-value\">").concat(phone, "</p>\n        </div>\n\n        <div class=\"section\">\n            <h2>Education</h2>\n            <p class=\"field-label\">Degree:</p>\n            <p class=\"field-value\">").concat(education, "</p>\n                    </div>\n\n        <div class=\"section\">\n            <h2>Skills</h2>\n").concat(skills, "\n        </div>\n\n                <div class=\"section\">\n            <h2>Experiance</h2>\n").concat(experience, "\n        </div>\n    </div>\n</body>\n</html>\n        ");
+    var resumeOutput = document.getElementById('resume-output');
+    var resumeContentDiv = document.getElementById('resume-content');
+    resumeContentDiv.innerHTML = resumeContent;
+    resumeOutput.style.display = 'block';
+});
